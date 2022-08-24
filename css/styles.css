@@ -458,8 +458,7 @@ body {
 
 .exemple {
   width: 370px;
-  border: var(--exemple-border-color) solid 1px;
-  transition: box-shadow var(--hover-focus-decor-func);
+    transition: box-shadow var(--hover-focus-decor-func);
 }
 
 .exemple:hover {
@@ -475,6 +474,13 @@ body {
 
 .exemple-img {
   width: 100%;
+  border: var(--exemple-border-color) solid 1px;
+  border-bottom: none;
+}
+.exemple-data {
+  padding: 20px 0px 20px 24px;
+  border: var(--exemple-border-color) solid 1px;
+  border-top: none;
 }
 
 .exemple .title {
@@ -482,23 +488,18 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  margin-left: 24px;
   margin-bottom: 4px;
-  margin-top: 20px;
 }
 
 .exemple .text {
   font-size: 16px;
   line-height: 1.88;
-  margin-left: 24px;
-  margin-bottom: 20px;
 }
 
 .exemple-box {
   position: relative;
   overflow: hidden;
 }
-
 .exemple:hover .overlay {
   transform: translateY(-100%);
 }
@@ -724,55 +725,27 @@ body {
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
 }
 .x-box {
   position: absolute;
   top: 8px;
   right: 8px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
+  padding: 0;
   border-radius: 50%;
   border: rgba(0, 0, 0, 0.1) solid 1px;
+  background-color: inherit;
 }
 .x-button {
   width: 18px;
   height: 18px;
-  margin: auto;
   fill: #000000;
 }
 .x-box:hover .x-button,
 .x-box:focus .x-button {
-  fill: var(--primary-accent-color);
-}
-
-.go-up {
-  fill: rgba(0, 0, 0, 0.2);
-  transition: fill var(--hover-focus-decor-func);
-}
-
-.go-up-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border: rgba(0, 0, 0, 0.1) solid 2px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.25);
-  transition: background-color var(--hover-focus-decor-func);
-}
-
-.go-up-btn:hover,
-.go-up-btn:focus {
-  background-color: var(--secondary-accent-color);
-}
-
-.go-up-btn:hover .go-up,
-.go-up-btn:focus .go-up {
   fill: var(--primary-accent-color);
 }

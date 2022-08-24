@@ -19,7 +19,7 @@
   </head>
   <body>
     <!-- шапка -->
-    <header class="page-header" id="start">
+    <header class="page-header">
       <div class="container">
         <nav>
           <div class="nav-box">
@@ -535,20 +535,17 @@
           <button class="send-btn" type="submit">Відправити</button>
         </form>
 
-        <a class="x-box" href="#" data-modal-close>
+        <button class="x-box" type="submit" data-modal-close><svg class="x-button">
+            <use href="./images/symbol-defs.svg#icon-close" width="18" height="18"></use>
+          </svg>
+        </button>
+        <!-- <a class="x-box" href="#" data-modal-close>
           <svg class="x-button">
             <use href="./images/symbol-defs.svg#icon-close" width="18" height="18"></use>
           </svg>
-        </a>
+        </a> -->
       </div>
     </div>
-
-    <!-- скрол вгору сторінки -->
-    <a class="go-up-btn" href="#start">
-      <svg class="go-up" width="42" height="42">
-        <use href="./images/symbol-defs.svg#icon-cheveron-outline-up"></use>
-      </svg>
-    </a>
 
     <script src="./js/modal.js"></script>
   </body>
