@@ -71,6 +71,24 @@ body {
   margin-right: 10px;
 }
 
+.button {
+  background-color: var(--primary-accent-color);
+  color: var(--secondary-accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--hover-focus-decor-func);
+}
+.button:hover,
+.button:focus {
+  background-color: #1870b8;
+}
+
 /* logo styles */
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -203,16 +221,7 @@ body {
 }
 
 .hero-button {
-  background-color: var(--primary-accent-color);
-  color: var(--secondary-accent-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
   padding: 10px 32px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* section styles */
@@ -522,50 +531,42 @@ body {
   background-color: var(--bg-color-dark);
   padding: 60px 0;
 }
-
 .page-footer .container {
   display: flex;
 }
-
 .page-footer .logo {
   margin-bottom: 20px;
 }
-
 .footer-contacts {
   font-style: normal;
 }
-
 .footer-contacts .link {
   color: var(--footer-text-color);
   transition: color var(--hover-focus-decor-func);
 }
-
 .footer-contacts .link:hover,
 .footer-contacts .link:focus {
   color: var(--primary-accent-color);
 }
-
 .footer-contacts-item {
   margin-bottom: 9px;
 }
-
 .footer-contacts-item :last-child {
   margin-bottom: 0;
 }
-
 .link.map {
   color: var(--secondary-accent-color);
 }
-
 .logo.no-margin {
   margin-right: 0px;
 }
 
-.footer-social {
+.footer-social,
+.subscribe {
   margin: 12px 0 0 94px;
 }
-
-.footer-social .title {
+.footer-social .title,
+.subscribe .title {
   font-family: 'Roboto';
   font-weight: 700;
   font-size: 14px;
@@ -575,13 +576,51 @@ body {
   color: var(--secondary-accent-color);
   margin-bottom: 20px;
 }
-
 .footer-social .circle {
   background-color: rgba(255, 255, 255, 0.1);
 }
-
 .footer-social .social-icon {
   fill: var(--secondary-accent-color);
+}
+.subscribe-form {
+  display: flex;
+  align-items: center;
+}
+.subsribe-email {
+  width: 358px;
+  height: 50px;
+  padding: 0 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: none;
+  color: var(--footer-text-color);
+  margin-right: 12px;
+  transition: border-color var(--hover-focus-decor-func);
+  transition: background-color var(--hover-focus-decor-func);
+}
+.subsribe-email:focus {
+  border-color: var(--secondary-accent-color);
+  background-color: rgba(255, 255, 255, 0.1)
+}
+.subscribe-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 200px;
+  height: 50px;
+}
+.send-icon {
+  fill: var(--secondary-accent-color);
+}
+.subscribe-button:hover .send-icon,
+.subscribe-button:focus .send-icon {
+  animation-name: rainbow;
+  animation-delay: 500ms;
+  animation-duration: 7000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 /* modal window styles */
@@ -711,21 +750,11 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.send-btn {
+.send-button {
   width: 200px;
   height: 50px;
   align-self: center;
-  background-color: var(--primary-accent-color);
-  color: var(--secondary-accent-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
+  }
 .x-box {
   position: absolute;
   top: 8px;
@@ -744,8 +773,36 @@ body {
   width: 18px;
   height: 18px;
   fill: #000000;
+  transition: fill var(--hover-focus-decor-func);
 }
 .x-box:hover .x-button,
 .x-box:focus .x-button {
   fill: var(--primary-accent-color);
+}
+
+
+/* animation */
+
+@keyframes rainbow {
+  0% {
+    fill: red;
+  }
+  10% {
+    fill: yellow;
+  }
+  30% {
+    fill: green;
+  }
+  50% {
+    fill: lightblue;
+  }
+  70% {
+    fill: blue;
+  }
+  90% {
+    fill: violet;
+  }
+  100% {
+    fill: red;
+  }
 }
