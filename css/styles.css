@@ -95,6 +95,8 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+}
+.page-header-logo {
   margin-right: 93px;
 }
 
@@ -556,9 +558,6 @@ body {
 }
 .link.map {
   color: var(--secondary-accent-color);
-}
-.logo.no-margin {
-  margin-right: 0px;
 }
 
 .footer-social,
